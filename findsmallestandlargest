@@ -2,15 +2,14 @@ import java.util.Scanner;
 
 public class findsmallestandlargest {
     public static void main(String[] args) {
-        int n;
 
         System.out.println("enter the limit of array");
 
         Scanner s=new Scanner(System.in) ;
-        n=s.nextInt();
+        int n = s.nextInt();
        int[] array= new int[n];
         System.out.println("ente rthe values in the array");
-        for (int j=0; j<=n;j++) {
+        for (int j=0; j<n;j++) {
             array[j]=s.nextInt();
         }
         int largest;
@@ -21,18 +20,24 @@ public class findsmallestandlargest {
                    if (array[j] > largest) {
                        array[j] = largest;
                    } else {
-                       largest = largest;
+
+                       int temp = largest;
+                       largest=temp;
                    }
-                   for (j = 0; j < n; j++) {
+                   for (j = 0; j <= n; j++) {
                        if (array[j] < smallest) {
                            array[j] = smallest;
                        } else {
-                           smallest = smallest;
+
+                           int temp1 = smallest;
+                           smallest=temp1;
                        }
-                       System.out.println(largest);
+                   }
+
+
+                   System.out.println(largest);
                        System.out.println(smallest);
 
-                   }
                }
 
 
